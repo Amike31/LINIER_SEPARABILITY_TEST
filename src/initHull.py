@@ -1,7 +1,7 @@
 import numpy as np
 from nextHull import *
 
-def ConvexHull(bucket):
+def NewConvexHull(bucket):
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TAHAP KE-1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ''' 1. Urutkan semua titik berdasarkan X-axis and Y-axis '''
     bucket.sort(axis=1)

@@ -46,12 +46,11 @@ def NextSimplex(bucket,line,arr):             # UNTUK TAHAP KE-2 dst..
             d   = dTemp
             idx = i
         elif ( dTemp==d ) :     # Jika jaraknya sama, makan bandingkan sudut
-            f = 0
-            # dtheta    = AngelFromLine(p1,p2,p3)
-            # Temptheta = AngelFromLine(p1,p2,p3)
-            # if (Temptheta > dtheta) :
-            #     d   = dTemp
-            #     idx = i
+            dtheta    = AngelFromLine(p1,p2,p3)
+            Temptheta = AngelFromLine(p1,p2,p3)
+            if (Temptheta > dtheta) :
+                d   = dTemp
+                idx = i
         
     ''' 2. Setelah didapat titik terjauh, bentuk 2 buah line baru '''
     ### GARIS BAGIAN KIRI
