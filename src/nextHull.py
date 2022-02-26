@@ -40,17 +40,18 @@ def NextSimplex(bucket,line,arr):             # UNTUK TAHAP KE-2 dst..
     for i in arr:
         X = bucket[i,0]
         Y = bucket[i,1]
-        p3 = np.array([[X,Y]])
+        p3 = np.array([X,Y])
         dTemp = DistanceFromLine(p1,p2,p3)
         if   (dTemp > d) :
             d   = dTemp
             idx = i
         elif ( dTemp==d ) :     # Jika jaraknya sama, makan bandingkan sudut
-            dtheta    = AngelFromLine(p1,p2,p3)
-            Temptheta = AngelFromLine(p1,p2,p3)
-            if (Temptheta > dtheta) :
-                d   = dTemp
-                idx = i
+            f = 0
+            # dtheta    = AngelFromLine(p1,p2,p3)
+            # Temptheta = AngelFromLine(p1,p2,p3)
+            # if (Temptheta > dtheta) :
+            #     d   = dTemp
+            #     idx = i
         
     ''' 2. Setelah didapat titik terjauh, bentuk 2 buah line baru '''
     ### GARIS BAGIAN KIRI
@@ -75,7 +76,7 @@ def NextSimplex(bucket,line,arr):             # UNTUK TAHAP KE-2 dst..
     for i in arr:
         XX = bucket[i,0]
         YY = bucket[i,1]
-        p3 = np.array([[XX,YY]])
+        p3 = np.array([XX,YY])
         
         ''' 3.1.a. Check untuk bagian kiri lineL,
             3.1.b. Check untuk bagian kiri lineR,

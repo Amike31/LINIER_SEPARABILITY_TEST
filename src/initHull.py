@@ -22,7 +22,7 @@ def ConvexHull(bucket):
     for i in range(len(bucket)):
         X = bucket[i,0]
         Y = bucket[i,1]
-        p3 = np.array([[X,Y]])
+        p3 = np.array([X,Y])
         det = DetFrom3Point(p1,p2,p3)
         ''' 3.2 Jika tidak digaris, bagi menjadi bagian KIRI (det>0) dan KANAN (det<0) '''
         if   (det > 0) :
@@ -52,3 +52,5 @@ def ConvexHull(bucket):
         else :
             simplex += NextSimplex(bucket,line,left)
             simplex += NextSimplex(bucket,line,right)
+    
+    return simplex
