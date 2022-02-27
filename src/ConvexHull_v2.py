@@ -71,8 +71,10 @@ def NextSimplices(bucket,line,arr):             # UNTUK TAHAP KE-2 dst..
     arrR = []
     ''' 3.1. Check di garis atau tidak untuk kedua garis batas baru, di garis (det=0) '''
     for i in arr:
+        ''' Note: pMax tidak perlu dicek karena merupakan titik pembentuk garis'''
+        if i==idx:
+            continue
         p3 = bucket[i]
-        
         ''' 3.1.a. Check untuk bagian kiri lineL,
             3.1.b. Check untuk bagian kiri lineR,
             apabila (det>0) maka masukkan ke array selanjutnya untuk diperiksa '''
@@ -125,23 +127,11 @@ def ConvexHull_v2(bucket):
             left  += [i]
         elif (det < 0):
             right += [i]
-
+     
+    ''' 3.3 Lakukan pengecekan secara rekursif untuk bagian KIRI dan bagian KANAN'''        
     lineL = [line[0],line[1]]
     lineR = [line[1],line[0]]
-    
-    if left==[] and right==[]:
-        simplices += [line]
-
-    elif left==[] and right!=[]:
-        simplices += [line]
-        simplices += NextSimplices(bucket,lineR,right)
-
-    elif right==[] and left!=[]:
-        simplices += [line]
-        simplices += NextSimplices(bucket,lineL,left)
-
-    else: # {left!=[] and right!=[]}
-        simplices += NextSimplices(bucket,lineL,left)
-        simplices += NextSimplices(bucket,lineR,right)
+    simplices += NextSimplices(bucket,lineL,left)
+    simplices += NextSimplices(bucket,lineR,right)
         
     return simplices
