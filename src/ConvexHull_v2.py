@@ -1,5 +1,4 @@
 import numpy as np
-import math
 from Sorting import quickSort
 
 def DetFrom3Point(p1,p2,p3):

@@ -1,8 +1,0 @@
-print("Selamat datang di Uji Coba Convex Hull v.2.0.1")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print()
-print("Terdapat beberapa pilihan visualisasi :")
-print("    1. Sepal Length (x) vs Sepal Width (y) :: IRIS")
-print("    2. Petal Length (x) vs Petal Width (y) :: IRIS")
-pil = int(input("Silahkan masukkan pilihan: "))
-print(pil)
