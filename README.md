@@ -2,49 +2,36 @@
 Test kelinieran Convex Hull untuk Dataset tertentu
 
 ## Deskripsi Singkat
-Program ini merupakan program untuk menyelesaikan Word Search Puzzle menggunakan algoritma brute force, ditulis dalam bahasa C++. Program menerima input berupa file teks yang berisi word search puzzle, dan mengeluarkan input yang berisi seluruh jawaban puzzle, waktu eksekusi program, dan total perbandingan huruf yang dilakukan.
+Pada Tucil kali ini akan dibuat sebuah pustaka (library) myConvexHull dalam bahasa Python yang dapat mengembalikan convex hull dari kumpulan data 2 dimensi (dapat dianggap kumpulan titik 2 dimensi). Himpunan titik pada bidang planar disebut convex jika untuk sembarang dua titik pada bidang tersebut (misal p dan q), seluruh segmen garis yang berakhir di p dan q berada pada himpunan tersebut. Contoh gambar 1 adalah poligon yang convex, sedangkan gambar 2 menunjukkan contoh yang non-convex.
 
-## Format File Input
-File input berupa file teks yang berisi matriks huruf di dalam puzzle (antar huruf dipisahkan oleh spasi), diikuti satu baris kosong, dan daftar kata-kata yang akan dicari di dalam puzzle. Satu baris satu kata.  
-Contoh:  
-```
-J S O L U T I S
-S U N A R U U A
-N E P T U N E T
-S O N I E I S U
-R C E V T R E R
-A H T R A E S N
-M M E R C U R Y
+<img src="img/image1.png" alt="Alt text" title="Optional title">
 
-EARTH
-JUPITER
-MARS
-MERCURY
-NEPTUNE
-SATURN
-URANUS
-VENUS
-```
 ## Requirement Program
-- g++ untuk compile
-- library:
-  - bits/stdc++.h
-  - chrono
+- python untuk compile
+- mathplotlib
+- skylearn
+- pandas
 
 ## Instalasi
 Clone repositori ini dengan menggunakan command pada terminal:  
 ```
-git clone https://github.com/Amike31/WORD_SEARCH_PUZZLE-BRUTE_FORCE_SOLVER.git
+git clone https://github.com/Amike31/LINIER_SEPARABILITY_TEST
 ```
 
 ## Menjalankan Program
 ### Menggunakan Source Code
 - Masuk ke dalam folder hasil clone
-- Compile terlebih dahulu program menggunakan g++, kemudian jalankan program. Gunakan command:  
+- Jalankan program menggunakan command berikut:  
 ```
-cd src ; if ($?) { g++ WSP.cpp -o WSP } ; if ($?) { .\WSP }
+cd src ; py Main.py
 ```
-- Setelah program berjalan, akan diminta nama file yang berisi word search puzzle {e.g text1 (7x8).txt}
+- Setelah program berjalan, akan disediakan 6 buah dataset pengujian yang berbeda. Anda dapat memilih dataset mana yang ingin dianalisis dan ditampilkan.
+- Setelah melakukan pemilihan, akan ditampilkan beberapa instace dari dataset tersebut dan muncul pop up window Gambar analisis data tersebut.
+
+## Output Program
+### Pengjuian author
+Anda dapat melihat hasil output program untuk masing-masing dataset di dalam folder output.
+Namun, apabila anda ingin menyimpan hasil analisis baru, jalankan program, lalu setelah pop up window muncul anda dapat menyimpannya dengan menekan tombol "save"
 
 ## Author
 Rahmat Rafid Akbar - 13520090
